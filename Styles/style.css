@@ -1,0 +1,73 @@
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; 
+    min-width: 250px; 
+    margin-left: -125px; 
+    background-color: rgb(228, 228, 228); 
+    color: #000; 
+    text-align: center; 
+    border-radius: 4px; 
+    padding: 13px; 
+    position: fixed; 
+    z-index: 1; 
+    right: 30px; 
+    bottom: 30px; 
+    box-shadow: 4px 4px 8px rgb(0, 0, 0, 0.3 );
+  }
+  
+  /* Show the snackbar when clicking on a button (class added with JavaScript) */
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s;
+    animation: fadein 0.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }
+  
+
+
+/* Animacion svg
+-------------------------------------------------- */
+
+.Capa_1 {
+    display: block;
+}
+
+
+/* Manejo de division principal con imagen y fondo amarillo
+-------------------------------------------------- */
+
+:root {
+    --input-padding-x: 1.5rem;
+    --input-padding-y: 0.75rem;
+}
+
+.login,
+.image {
+    min-height: 100vh;
+}
+
+.bg-image {
+    background-image: url('../Img/BlackWood.jpg');
+    background-size: cover;
+    background-position: center;
+}
